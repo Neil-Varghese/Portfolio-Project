@@ -25,7 +25,7 @@ const skills = [
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center">
       {/* Background */}
       <div className="absolute inset-0">
         <img
@@ -184,14 +184,19 @@ export const Hero = () => {
       </div>
 
       {/* Scroll */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800">
-        <a
-          href="#about"
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800 z-20">
+        <button
+          onClick={() => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
           className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
         >
           <span className="text-[8px] uppercase tracking-wider">Scroll</span>
           <ChevronDown className="w-3.5 h-3.5 animate-bounce" />
-        </a>
+        </button>
       </div>
     </section>
   );
