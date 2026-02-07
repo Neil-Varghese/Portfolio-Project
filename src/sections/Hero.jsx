@@ -55,7 +55,7 @@ export const Hero = () => {
                 filter: size < 3 ? "blur(10px)" : "none",
                 background:
                     "radial-gradient(circle, white 0%, rgba(146, 198, 250, 0.6) 60%, transparent 100%)",
-                animation: `slow-float ${duration}s ease-in-out infinite`,
+                animation: `slow-drift ${duration}s ease-in-out infinite`,
                 animationDelay: `${Math.random() * -duration}s`,
                 }}
             />
