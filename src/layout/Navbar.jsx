@@ -24,7 +24,11 @@ export const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-1 border-none" : "bg-transparent py-2"} z-50`}>
         <nav className=" container mx-auto px-6 flex items-center justify-between">
             <a
-                href="a"
+                href="#"
+                onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className="text-xl font font-extrabold tracking-tight hover:text-primary"
             >
                 NVA<span className="text-primary ">.</span>
