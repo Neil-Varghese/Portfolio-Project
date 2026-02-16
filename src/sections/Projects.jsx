@@ -3,23 +3,24 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce solution with inventory management, payments, and analytics.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
+  title: "VisionXaid – Retinal Disease Screening System",
+  description:
+    "AI-powered retinal disease screening system that detects Diabetic Retinopathy, Glaucoma, AMD, and normal cases from fundus images with real-time predictions and visual heatmap explanations.",
+  image: "/projects/project2.png",
+  tags: ["TensorFlow", "EfficientNetB0", "React", "Deep Learning"],
+  link: "https://visionxaid.onrender.com/",
+  github: "https://github.com/Neil-Varghese/Visionxaid.",
   },
   {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
-  },
+  title: "ResuMate – AI Resume Building Platform",
+  description:
+    "A full-stack MERN resume builder featuring Gemini-powered AI summaries and job description enhancement, automatic resume parsing into structured fields, and four customizable templates with live preview, PDF export, JWT authentication, and sharing capabilities.",
+  image: "/projects/project4.png",
+  tags: ["Express.js", "Node.js", "MongoDB", "React.js", "Gemini API"],
+  link: "https://resumate-client.onrender.com/",
+  github: "https://github.com/Neil-Varghese/ResuMate",
+},
+
 ];
 
 export const Projects = () => {
