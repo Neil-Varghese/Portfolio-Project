@@ -20,7 +20,15 @@ const projects = [
   link: "https://resumate-client.onrender.com/",
   github: "https://github.com/Neil-Varghese/ResuMate",
 },
-
+{
+  title: "ComfyKeys – Trusted Home Stay Marketplace",
+  description:
+    "A full-stack MERN accommodation platform built with RESTful APIs, server-side rendering, JWT-based authentication, Cloudinary media storage, geolocation-powered maps, and a responsive UI with listings, reviews, and rating workflows.",
+  image: "/projects/project1.png",
+  tags: ["MongoDB", "Express.js", "Node.js", "REST API", "JWT Auth"],
+  link: "https://comfykeys-5ws8.onrender.com/",
+  github: "https://github.com/Neil-Varghese/Comfykeys",
+},
 ];
 
 export const Projects = () => {
