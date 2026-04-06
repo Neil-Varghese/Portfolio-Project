@@ -111,7 +111,7 @@ export const Projects = () => {
                     {project.description}
                   </p>
 
-                  <div className="mt-3 flex gap-2">
+                  <div className="mt-3 flex gap-2 md:hidden">
                     <a
                       href={project.link}
                       target="_blank"
