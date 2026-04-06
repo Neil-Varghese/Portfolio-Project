@@ -9,7 +9,7 @@ const projects = [
   image: "/projects/project2.png",
   tags: ["TensorFlow", "EfficientNetB0", "React", "Deep Learning"],
   link: "https://visionxaid.onrender.com/",
-  github: "https://github.com/Neil-Varghese/Visionxaid.",
+  github: "https://github.com/Neil-Varghese/Visionxaid",
   },
   {
   title: "ResuMate – AI Resume Building Platform",
@@ -74,19 +74,25 @@ export const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent opacity-60" />
 
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                {/* Overlay links are desktop-only; mobile uses labeled buttons in card content */}
+                <div className="absolute inset-0 hidden md:flex items-center justify-center gap-2 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-200">
                   <a
                     href={project.link}
-                    className="p-1.5 rounded-full glass hover:bg-primary hover:text-primary-foreground transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open live project for ${project.title}`}
+                    className="h-11 w-11 md:h-10 md:w-10 inline-flex items-center justify-center rounded-full glass hover:bg-primary hover:text-primary-foreground transition"
                   >
-                    <ArrowUpRight className="w-3.5 h-3.5" />
+                    <ArrowUpRight className="w-4 h-4" />
                   </a>
                   <a
                     href={project.github}
-                    className="p-1.5 rounded-full glass hover:bg-primary hover:text-primary-foreground transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open GitHub repository for ${project.title}`}
+                    className="h-11 w-11 md:h-10 md:w-10 inline-flex items-center justify-center rounded-full glass hover:bg-primary hover:text-primary-foreground transition"
                   >
-                    <Github className="w-3.5 h-3.5" />
+                    <Github className="w-4 h-4" />
                   </a>
                 </div>
               </div>
@@ -104,6 +110,27 @@ export const Projects = () => {
                   <p className="text-[12px] text-muted-foreground leading-snug mt-1">
                     {project.description}
                   </p>
+
+                  <div className="mt-3 flex gap-2">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 h-10 inline-flex items-center justify-center gap-1.5 rounded-md border border-border/70 bg-card/70 text-[11px] font-medium text-secondary-foreground hover:border-primary/60 hover:text-primary transition"
+                    >
+                      Live Project
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 h-10 inline-flex items-center justify-center gap-1.5 rounded-md border border-border/70 bg-card/70 text-[11px] font-medium text-secondary-foreground hover:border-primary/60 hover:text-primary transition"
+                    >
+                      GitHub
+                      <Github className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-1 pt-2">
