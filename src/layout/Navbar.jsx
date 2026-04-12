@@ -21,7 +21,7 @@ export const Navbar = () => {
     }, []);
 
     return ( 
-    <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-1 border-none" : "bg-transparent py-2"} z-50`}>
+    <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "bg-background/80 backdrop-blur-xl py-1 border-none" : "bg-transparent py-2"} z-50`}>
         <nav className=" container mx-auto px-6 flex items-center justify-between">
             <a
                 href="#"
@@ -41,7 +41,7 @@ export const Navbar = () => {
                         <a 
                             href={link.href} 
                             key={index}
-                            className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:gb-surface"
+                            className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
                         >
                             {link.label}
                         </a>
